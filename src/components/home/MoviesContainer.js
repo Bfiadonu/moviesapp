@@ -11,12 +11,16 @@ export class MoviesContainer extends Component {
 
     content = 
       movies.Length > 0 
-      ? movies.map((movie, index) => <MovieCard key={index} movie={movie}/>)
-      : null;
+          ? movies.map((movie, index) => (
+      <MovieCard key={index} movie={movie} />
+                                         ))
+          : null;
     return <div className="row">{content}</div>;   
-                   
-                   }
+    }
 }
+  
+
+ 
 
 const mapStateToProps = state => ({
   movies: state.movies.movies
