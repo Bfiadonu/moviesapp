@@ -10,12 +10,13 @@ export class MoviesContainer extends Component {
     let content = '';
 
     content = 
-      movies.Length > 0 
-          ? movies.map((movie, index) => (
+      movies.Response === 'True' 
+          ? movies.Search.map((movie, index) => (
       <MovieCard key={index} movie={movie} />
                                          ))
           : null;
-    return <div className="row">{content}</div>;   
+    return (<div className="row">{content}</div>
+            );   
     }
 }
   
